@@ -19,6 +19,7 @@ class Solution {
         System.out.println("hello3");
         System.out.println("hotfix1");
         System.out.println("gitee test");
+        int i = 1;
         }
     }
 
