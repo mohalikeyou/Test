@@ -21,6 +21,7 @@ class Solution {
         System.out.println("master conflict");
         System.out.println("hotfix conflict");
         System.out.println("push test");
+        System.out.println("push test 22");
         }
     }
 
