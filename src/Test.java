@@ -19,6 +19,7 @@ class Solution {
         System.out.println("hello3");
         System.out.println("hotfix1");
         System.out.println("master conflict");
+        System.out.println("hotfix conflict");
         }
     }
 
