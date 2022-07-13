@@ -22,6 +22,7 @@ class Solution {
         System.out.println("hotfix conflict");
         System.out.println("push test");
         System.out.println("push test 22");
+        System.out.println("push ssh test");
         }
     }
 
