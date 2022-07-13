@@ -18,6 +18,7 @@ class Solution {
         if (1 == 1)return;
         System.out.println("hello3");
         System.out.println("hotfix1");
+        System.out.println("hotfix conflict");
         }
     }
 
