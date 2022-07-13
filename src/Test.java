@@ -16,6 +16,7 @@ public class Test {
 class Solution {
     public void moveZeroes(int[] nums) {
         if (1 == 1)return;
+        System.out.println("hello3");
         }
     }
 
