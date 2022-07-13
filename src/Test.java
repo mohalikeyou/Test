@@ -15,18 +15,10 @@ public class Test {
 //the definition of a tree node;
 class Solution {
     public void moveZeroes(int[] nums) {
-        if (nums.length == 1) return;
-
-        for (int i = 0, j = 0; i < nums.length; ++i) {
-            if(nums[i] != 0) {
-                nums[i] += nums[j];
-                nums[j] = nums[i] - nums[j];
-                nums[i] = nums[i] - nums[j];
-                ++j;
-            }
+        if (1 == 1)return;
         }
     }
-}
+
 
 
 
