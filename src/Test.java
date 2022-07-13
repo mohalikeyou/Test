@@ -18,11 +18,6 @@ class Solution {
         if (1 == 1)return;
         System.out.println("hello3");
         System.out.println("hotfix1");
-        System.out.println("master conflict");
-        System.out.println("hotfix conflict");
-        System.out.println("push test");
-        System.out.println("push test 22");
-        System.out.println("push ssh test");
         }
     }
 
