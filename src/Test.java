@@ -49,7 +49,7 @@ class Solution {
                 if (res.equals("") || res.length() > i - j + 1)
                     res = s.substring(j, i + 1);
             }
-	    return 0;// test0
+	    return 0;// test0//test1
         }
     }
 }
