@@ -50,8 +50,6 @@ class Solution {
                     res = s.substring(j, i + 1);
             }
         }
-        return res;  //我就不！一号
-		     //本地测试！！！
     }
 }
 
