@@ -8,13 +8,7 @@ import java.util.jar.JarEntry;
  */
 public class Test {
     public static void main(String[] args) {
-        MyLinkedList myLinkedList = new MyLinkedList();
-        myLinkedList.addAtHead(1);
-        myLinkedList.addAtTail(3);
-        myLinkedList.addAtIndex(1, 2);
-        myLinkedList.get(1);
-        myLinkedList.deleteAtIndex(1);
-        myLinkedList.get(1);
+        new Solution().canConstruct("a","b");
     }
 }
 
@@ -26,83 +20,35 @@ class ListNode {
     public ListNode(int val, ListNode next) {this.val = val; this.next = next;}
 }
 
-class MyLinkedList {
-    int size;
-    ListNode head;
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public boolean canConstruct(String ransomNote, String magazine) {
+        if (ransomNote.length() > magazine.length()) return false;
 
-    public MyLinkedList() {
-        head = new ListNode(-1);
-        size = 0;
-    }
-
-    public int get(int index) {
-        if (index < 0 || index >= size) {
-            return -1;
-        }
-        ListNode curr = head;
-        while (index >= 0) {
-            --index;
-            curr = curr.next;
-        }
-        return curr.val;
-    }
-
-    public void addAtHead(int val) {
-        ListNode curr = new ListNode(val);
-        curr.next = head.next;
-        head.next = curr;
-        ++size;
-    }
-
-    public void addAtTail(int val) {
-        ListNode curr = head;
-        while (curr.next != null) curr = curr.next;
-        curr.next = new ListNode(val);
-        ++size;
-    }
-
-    public void addAtIndex(int index, int val) {
-        if (index > size || index < 0) return;
-
-        ListNode curr = head;
-
-        while (index > 0) {
-            curr = curr.next;
-            --index;
+        char[] map = new char[26];
+        for (int i = 0; i < magazine.length(); ++i) {
+            ++map[magazine.charAt(i) - 'a'];
         }
 
-        curr.next = new ListNode(val,curr.next.next);
-        ++size;
-    }
+        char[] rchar = ransomNote.toCharArray();
 
-    public void deleteAtIndex(int index) {
-        if (index >= size || index < 0) return;
-
-        ListNode curr = head;
-
-        while (index > 0) {
-            curr = curr.next;
-            --index;
+        for (int i = 0; i < rchar.length; ++i) {
+            --map[rchar[i] - 'a'];
+            if (map[rchar[i] - 'a'] < 0) return false;
         }
 
-        curr.next = curr.next.next;
-
-        --size;
+        return true;
     }
 }
-
-/**
- * Your MyLinkedList object will be instantiated and called as such:
- * MyLinkedList obj = new MyLinkedList();
- * int param_1 = obj.get(index);
- * obj.addAtHead(val);
- * obj.addAtTail(val);
- * obj.addAtIndex(index,val);
- * obj.deleteAtIndex(index);
- */
-//remote test
-//remote test2
-
 
 
 
